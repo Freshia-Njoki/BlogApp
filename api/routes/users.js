@@ -57,9 +57,9 @@ route.get("/:id", async(req, res) => {
         res.status(200).json(others);
         
     } catch (err) {
-        res.status(500).json(err)
+        res.status(500).json(err);
         
     }
 })
 
-module.exports = route
+module.exports = route;
