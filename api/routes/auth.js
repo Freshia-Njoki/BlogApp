@@ -2,7 +2,7 @@ const route = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require('bcrypt');
 
-//REQUIRE
+//REGISTER
 route.post("/register", async (req, res) => {
     try{
 
