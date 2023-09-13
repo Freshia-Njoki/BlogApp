@@ -11,8 +11,7 @@ const multer = require("multer")
 
 dotenv.config();
 app.use(express.json());
-mongoose
-.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGO_URL, {
     // useNewUrlParse: true,
     useUnifiedTopology: true,
     // useCreateIndex: true,
@@ -22,7 +21,7 @@ mongoose
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
-        cd(null,"images");//callback function will take care of any errors
+        cd(null,"images");//callback function- takes care of any errors
     },
     filename: (req, file, cb) => {
         cd(null,req.body.name);
